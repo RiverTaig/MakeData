@@ -44,7 +44,7 @@ define(["require", "exports", "esri/layers/GraphicsLayer", "esri/geometry/Polyli
                 this._gl.add(g);
             }
             catch (ex) {
-                console.log("ERROR " + ex.toString());
+                console.log("ERROR! " + ex.toString());
             }
         };
         return MakeData;
