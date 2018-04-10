@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no">
+    <title>Make Data</title>
+    <link rel="stylesheet" href="css/claro.css">
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="https://js.arcgis.com/3.23/esri/css/esri.css">
+    
+    <style>
+        html,
+        body,
+        #map {
+            height: 100%;
+            width: 100%;
+            margin: 0;
+            padding: 0;
+        }
+
+        #controls {
+            background: #fff;
+            box-shadow: 0 6px 6px -6px #999;
+            color: #444;
+            font-family: sans-serif;
+            height: auto;
+            left: 1em;
+            padding: 1em;
+            position: absolute;
+            top: 1em;
+            width: auto;
+            z-index: 40;
+        }
+
+        #controls div {
+            padding: 0 0 1em 0;
+        }
+    </style>
+
+    <!-- DOJO CONFIG TO ALLOW AMD LOADING OF MODULES -->
+    <script>
+        var locationPath = location.pathname.replace(/\/[^\/]+$/, "");
+        window.dojoConfig = {
+            isDebug: true,
+            parseOnLoad: true,
+            packages: [
+                {
+                    name: "app",
+                    location: locationPath + "/dist"
+                }
+            ]
+        };
+    </script>
+    <!-- ESRI JAVASCRIPT API REFERENCE -->
+    <script src="https://js.arcgis.com/3.23/"></script>
+</head>
+
+
+<body class="claro">
+    <div id="myCustomDojoDiv" class="divStyleSetInMainCSS" >this is a test</div>
+    <div id="myCustomDojoDiv2" class="divStyleSetInMainCSS">this is a another test</div>
+    <button id="makeData_btnMakeData">MakeData</button>
+    <!-- THE ESRI MAP -->
+    <div id="map"></div>
+
+    <script>require(["app/main"]);</script>
+</body>
+
+</html>

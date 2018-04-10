@@ -1,0 +1,25 @@
+{
+    "name": "TypeScriptWebTemplate",
+    "version": "1.0.0",
+    "description": "",
+    "main": "index.js",
+    "scripts": {
+        "dev": "tsc -w",
+        "lint": "tslint './app/*.ts'"
+    },
+    "keywords": [
+        "esri",
+        "arcgis",
+        "typescript"
+    ],
+    "author": "River Taig",
+    "license": "MIT",
+    "devDependencies": {
+        "dojo-typings": "^1.11.9",
+        "tslint": "^4.2.0"
+    },
+    "dependencies": {
+        "@types/arcgis-js-api": "^3.23.0",
+        "typescript": "^2.8.1"
+    }
+}
