@@ -10,22 +10,27 @@ define(["require", "exports", "esri/map", "dojo/domReady", "dojo/dom", "dojo/on"
             slider: false,
             zoom: 15
         });
-        // let myCustomDojoDiv: HTMLDivElement = <HTMLDivElement>dom.byId("myCustomDojoDiv");
+        // let myCustomDojoDiv:  HTMLDivElement = <HTMLDivElement>dom.byId("myCustomDojoDiv");
         // myCustomDojoDiv.innerText = "s Hello World! this was changed by dojo in Typescript.";
         var _makeData = null;
         var myCustomJQueryDiv = dom.byId("myCustomJqueryDiv");
         var makeData = new MakeData_1.MakeData(myMap);
+        on(dom.byId("makeData_btnInfo"), "click", function () {
+            //    let makeData : MakeData = new MakeData(myMap);
+            debugger;
+            //this._makeData = makeData;
+        });
         on(dom.byId("makeData_btnMakeData"), "click", function () {
             //    let makeData : MakeData = new MakeData(myMap);
             makeData.MakeData();
             makeData.MakeSPGraphicsIntoFeatureLayer();
             //this._makeData = makeData;
         });
-        on(dom.byId("makeData_btnLabel"), "click", function () {
-            //    let makeData : MakeData = new MakeData(myMap);
-            makeData.LabelInExtent();
-            //this._makeData = makeData;
-        });
+        // on(dom.byId("makeData_btnLabel"), "click", () => {
+        //   //    let makeData : MakeData = new MakeData(myMap);
+        //       makeData.LabelInExtent();
+        //       //this._makeData = makeData;
+        //     });
         // on(dom.byId("makeData_btnSerialize"), "click", () => {
         //   let ly = myMap.getLayer("ElectricLines_06");
         //   let cache : any[] = [];

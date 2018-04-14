@@ -18,23 +18,28 @@ domReady(() => {
     zoom: 15
   });
 
-  // let myCustomDojoDiv: HTMLDivElement = <HTMLDivElement>dom.byId("myCustomDojoDiv");
+  // let myCustomDojoDiv:  HTMLDivElement = <HTMLDivElement>dom.byId("myCustomDojoDiv");
   // myCustomDojoDiv.innerText = "s Hello World! this was changed by dojo in Typescript.";
   let _makeData = null;
   let myCustomJQueryDiv: HTMLDivElement = <HTMLDivElement>dom.byId("myCustomJqueryDiv");
   let makeData : MakeData = new MakeData(myMap);
 
-  on(dom.byId("makeData_btnMakeData"), "click", () => {
+  on(dom.byId("makeData_btnInfo"), "click", () => {
 //    let makeData : MakeData = new MakeData(myMap);
-    makeData.MakeData();
-    makeData.MakeSPGraphicsIntoFeatureLayer();
+    debugger;
     //this._makeData = makeData;
   });
-  on(dom.byId("makeData_btnLabel"), "click", () => {
+  on(dom.byId("makeData_btnMakeData"), "click", () => {
     //    let makeData : MakeData = new MakeData(myMap);
-        makeData.LabelInExtent();
+        makeData.MakeData();
+        makeData.MakeSPGraphicsIntoFeatureLayer();
         //this._makeData = makeData;
-      });
+      });  
+  // on(dom.byId("makeData_btnLabel"), "click", () => {
+  //   //    let makeData : MakeData = new MakeData(myMap);
+  //       makeData.LabelInExtent();
+  //       //this._makeData = makeData;
+  //     });
 
   // on(dom.byId("makeData_btnSerialize"), "click", () => {
   //   let ly = myMap.getLayer("ElectricLines_06");
